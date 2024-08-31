@@ -25,12 +25,22 @@
             font-size: 1.5rem;
         }
         .navbar-nav .nav-link {
-            color: #333;
+            color: #333; /* Cor preta */
             margin-left: 20px;
             font-size: 1.2rem;
         }
         .navbar-nav .nav-link:hover {
-            color: #007bff; /* Cor ao passar o mouse */
+            color: #333; /* Manter a cor preta ao passar o mouse */
+        }
+        .hero-image {
+            background-image: url('cloud.jpg'); /* Substitua pelo caminho da sua imagem */
+            background-size: cover; /* Cobrir toda a área */
+            background-position: center; /* Centralizar a imagem */
+            width: 100%;
+            height: 100vh; /* Altura da viewport */
+            position: relative;
+            z-index: 0; /* Ficar atrás do menu */
+            margin-top: -56px; /* Compensar o padding-top do body para que cubra o menu */
         }
         @media (max-width: 768px) {
             .navbar-nav {
@@ -65,9 +75,13 @@
             </ul>
         </div>
     </nav>
-    <div class="container mt-4">
 
+    <!-- Imagem grande cobrindo o menu -->
+    <div class="hero-image">
+        <!-- Conteúdo da imagem, se necessário -->
     </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
