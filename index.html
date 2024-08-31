@@ -25,12 +25,12 @@
             font-size: 1.5rem;
         }
         .navbar-nav .nav-link {
-            color: #333; /* Cor preta */
+            color: #000 !important; /* Cor preta */
             margin-left: 20px;
             font-size: 1.2rem;
         }
         .navbar-nav .nav-link:hover {
-            color: #333; /* Manter a cor preta ao passar o mouse */
+            color: #555 !important; /* Manter a cor preta ao passar o mouse */
         }
         .hero-image {
             background-image: url('cloud.jpg'); /* Substitua pelo caminho da sua imagem */
@@ -40,7 +40,37 @@
             height: 100vh; /* Altura da viewport */
             position: relative;
             z-index: 0; /* Ficar atrás do menu */
-            margin-top: -56px; /* Compensar o padding-top do body para que cubra o menu */
+            margin-top: 0px; /* Compensar o padding-top do body para que cubra o menu */
+            display: flex;
+            align-items: center; /* Centralizar verticalmente */
+            justify-content: flex-start; /* Alinhar o conteúdo à esquerda */
+            padding: 20px;
+        }
+        .hero-content {
+            text-align: left;
+            color: white;
+            max-width: 600px;
+            animation: slideDown 1s ease-out forwards;
+            transform: translateY(-300px);
+            margin-left: 30px; /* Mover mais para o canto esquerdo */
+        }
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        @keyframes slideDown {
+            to {
+                transform: translateY(0);
+            }
         }
         @media (max-width: 768px) {
             .navbar-nav {
@@ -49,6 +79,42 @@
             .navbar-nav .nav-link {
                 margin: 10px 0;
             }
+            .hero-content {
+                margin-left: 15px; /* Ajuste menor para telas menores */
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 20px;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .custom-button {
+        background-color: #660066; /* Cor base */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease; /* Transição suave */
+        }
+
+        .custom-button:hover {
+            background-color: #4d004d; /* Cor mais escura ao passar o mouse */
         }
     </style>
 </head>
@@ -76,12 +142,33 @@
         </div>
     </nav>
 
-    <!-- Imagem grande cobrindo o menu -->
+    <!-- Imagem grande cobrindo o menu com conteúdo -->
     <div class="hero-image">
-        <!-- Conteúdo da imagem, se necessário -->
+        <div class="hero-content">
+            <h1>Olá 🌍, eu sou Kaique Nakao</h1>
+            <p>Sou engenheiro de machine learning, especializado em técnicas de inteligência artificial e provisionamento na nuvem AWS.</p>            
+            <div class="socials">
+                <!-- Ícones de redes sociais ou links -->
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
     </div>
 
-
+    <!-- Seção Sobre -->
+    <div id="sobre" class="section">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Sou Kaique Nakao, engenheiro de machine learning no Itaú, especializado em AWS, MLOps e engenharia de dados. Tenho experiência na construção de pipelines de dados e arquiteturas de MLOps, como Model Registry e Feature Store, facilitando o desenvolvimento de modelos de IA.</p>
+    
+        <p>Antes disso, trabalhei na PagSeguro, onde usei o Google Analytics para gerar insights estratégicos da plataforma. Possuo 7 certificações AWS e desenvolvo sites e soluções personalizadas. Também compartilho minhas ideias sobre IA no meu blog.</p>
+    
+        <p>Sou apaixonado por tecnologia e inovação, sempre buscando novos desafios.</p>
+    
+        <a href="#contatos" class="btn btn-primary custom-button">Entre em Contato</a>
+    </div>
+    
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
