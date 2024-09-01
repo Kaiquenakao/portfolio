@@ -1,0 +1,228 @@
+body {
+    background-color: #f0f0f0; /* Cor de fundo cinza */
+    margin: 0;
+    padding-top: 56px; /* Espaço para o menu fixo no topo */
+}
+.navbar {
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-bottom: 1px solid #ddd; /* Borda inferior leve */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garantir que o menu fique acima do conteúdo */
+}
+.navbar-brand {
+    color: #333;
+    font-size: 1.5rem;
+}
+.navbar-nav .nav-link {
+    color: #000 !important; /* Cor preta */
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+.navbar-nav .nav-link:hover {
+    color: #555 !important; /* Manter a cor preta ao passar o mouse */
+}
+.hero-image {
+    background-image: url('../cloud.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Cobrir toda a área */
+    background-position: center; /* Centralizar a imagem */
+    width: 100%;
+    height: 100vh; /* Altura da viewport */
+    position: relative;
+    z-index: 0; /* Ficar atrás do menu */
+    margin-top: 0px; /* Compensar o padding-top do body para que cubra o menu */
+    display: flex;
+    align-items: center; /* Centralizar verticalmente */
+    justify-content: flex-start; /* Alinhar o conteúdo à esquerda */
+    padding: 20px;
+}
+.hero-content {
+    text-align: left;
+    color: white;
+    max-width: 600px;
+    animation: slideDown 1s ease-out forwards;
+    transform: translateY(-300px);
+    margin-left: 30px; /* Mover mais para o canto esquerdo */
+}
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+    }
+    .hero-content {
+        margin-left: 15px; /* Ajuste menor para telas menores */
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 20px;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 1s ease-out; /* Transição suave de fade-in */
+}
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+.section p {
+    font-size: 1rem;
+    color: #666;
+}
+.fade-in {
+    opacity: 1; /* Torna a seção visível */
+}
+.custom-button {
+    background-color: #660066; /* Cor base */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+.custom-button:hover {
+    background-color: #4d004d; /* Cor mais escura ao passar o mouse */
+    color: white;
+}
+.card-tags {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #a64dff; /* Roxo claro */
+    color: white;
+    display: inline-block;
+    font-size: 0.8rem; /* Texto menor */
+    margin-right: 5px; /* Espaço entre as tags */
+}
+.card-img-top {
+    max-height: 180px; /* Limita a altura da imagem do card */
+    object-fit: cover; /* Faz a imagem cobrir o card sem distorção */
+}
+
+/* Estilo para a seção de contatos */
+#contatos {
+    padding: 60px 20px; /* Mantém o padding das seções */
+}
+
+#contatos form {
+    max-width: 600px; /* Limita a largura do formulário */
+    padding: 20px;
+    margin: 0; /* Remove o margin centralizado */
+}
+
+#contatos .form-group {
+    margin-bottom: 15px;
+}
+
+#contatos .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; /* Alinha o texto dos labels à esquerda */
+}
+
+#contatos .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%; /* Garante que o input e textarea ocupem toda a largura do container */
+}
+
+#contatos .form-control,
+#contatos textarea {
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+#contatos .required {
+    color: red; /* Cor para o asterisco */
+    font-size: 1rem;
+}
+
+#contatos .btn-primary.custom-button {
+    width: auto; /* Ajusta o botão para não ocupar toda a largura */
+    margin-top: 15px; /* Adiciona um espaço acima do botão */
+}
+
+.img-fluid {
+    max-height: 300px; 
+    border-radius: 10px;
+    margin-top: -20px; /* Ajuste para subir a imagem */
+}
+
+.btn-custom-active {
+    background-color: #4d004d !important; /* Cor escura do botão quando clicado */
+    border: none;
+    color: white;
+}
+
+.alert {
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Transição suave para opacidade */
+}
+
+.alert.show {
+    opacity: 1;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #660066; /* Cor roxa para o destaque */
+    color: #660066; /* Cor roxa para o texto */
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.skill-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card img {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.skill-card h5 {
+    margin-top: 5px;
+    font-size: 1rem; /* Ajuste o tamanho conforme necessário */
+    font-weight: 600;
+}

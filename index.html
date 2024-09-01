@@ -3,47 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KN</title>
+    <title>Portfólio - Kaique Nakao</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f0f0f0; /* Cor de fundo cinza */
-            margin: 0;
-            padding-top: 56px; /* Espaço para o menu fixo no topo */
-        }
-        .navbar {
-            background-color: #ffffff; /* Cor de fundo branca */
-            border-bottom: 1px solid #ddd; /* Borda inferior leve */
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000; /* Garantir que o menu fique acima do conteúdo */
-        }
-        .navbar-brand {
-            color: #333;
-            font-size: 1.5rem;
-        }
-        .navbar-nav .nav-link {
-            color: #333;
-            margin-left: 20px;
-            font-size: 1.2rem;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #007bff; /* Cor ao passar o mouse */
-        }
-        @media (max-width: 768px) {
-            .navbar-nav {
-                text-align: center;
-            }
-            .navbar-nav .nav-link {
-                margin: 10px 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="shadow-lg navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">KN</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -54,23 +19,555 @@
                     <a class="nav-link" href="#sobre">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#projeto">Projeto</a>
+                    <a class="nav-link" href="#projetos">Projetos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contatos">Contatos</a>
+                    <a class="nav-link" href="#contatos">Contato</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#habilidades">Habilidades</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#certificacoes">Certificações</a>
+                </li>
             </ul>
         </div>
     </nav>
-    <div class="container mt-4">
 
+    <!-- Imagem grande cobrindo o menu com conteúdo -->
+    <div class="hero-image">
+        <div class="hero-content">
+            <h1>Olá 🌍, eu sou Kaique Nakao</h1>
+            <p>Sou engenheiro de machine learning, especializado em técnicas de inteligência artificial e provisionamento na nuvem AWS.</p>            
+            <div class="socials">
+                <!-- Ícones de redes sociais ou links -->
+                <a href="https://github.com/Kaiquenakao" class="href">
+                    <img src="img/github.png">
+                </a>
+                <a href="https://www.linkedin.com/in/kaique-nakao-5b25151ba/" class="href">
+                    <img src="img/linkedin.png">
+                </a>
+                <a href="https://pt.stackoverflow.com/users/251976/kaique-nakao" class="href">
+                    <img src="img/stackoverflow.png">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Sobre -->
+    <div id="sobre" class="section">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Sou Kaique Nakao, engenheiro de machine learning no Itaú, especializado em AWS, MLOps e engenharia de dados. Tenho experiência na construção de pipelines de dados e arquiteturas de MLOps, como Model Registry e Feature Store, facilitando o desenvolvimento de modelos de IA.</p>
+    
+        <p>Antes disso, trabalhei na PagSeguro, onde usei o Google Analytics para gerar insights estratégicos da plataforma. Possuo 7 certificações AWS e desenvolvo sites e soluções personalizadas. Também compartilho minhas ideias sobre IA no meu blog.</p>
+    
+        <p>Sou apaixonado por tecnologia e inovação, sempre buscando novos desafios.</p>
+    
+        <a href="#contatos" class="btn btn-primary custom-button">Entre em Contato</a>
+    </div>
+
+    <!-- Seção Projetos -->
+    <div id="projetos" class="section">
+        <h2>Projetos</h2>
+        <p>Explore alguns dos meus projetos, onde aplico minhas habilidades em machine learning, MLOps e engenharia de dados para resolver problemas complexos e criar soluções inovadoras.</p>
+
+        <!-- Cards de Projetos -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/mlops.png" alt="Projeto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Model Registry</h5>
+                            <p class="card-text">Projeto focado em gerenciar e versionar modelos de Machine Learning, facilitando o deployment e garantindo a rastreabilidade durante o ciclo de vida dos modelos.</p>
+                            <span class="card-tags">Machine Learning</span>  
+                            <span class="card-tags">MLOps</span>
+                            <span class="card-tags">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/mlops.png" alt="Projeto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature Store</h5>
+                            <p class="card-text">Implementação de uma Feature Store para padronizar, reutilizar e compartilhar features entre projetos, otimizando a preparação de dados e a consistência entre treinamento e produção.</p>
+                            <span class="card-tags">Data Engineering</span>
+                            <span class="card-tags">Machine Learning</span>  
+                            <span class="card-tags">AWS</span>   
+                            <span class="card-tags">MLOps</span>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/mlops.png" alt="Projeto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Automação com AWS</h5>
+                            <p class="card-text">Projeto de automação utilizando serviços da AWS, como Lambda, CloudFormation e Step Functions, para otimizar fluxos de trabalho e reduzir tarefas manuais. A solução permite a criação de pipelines automatizados, provisionamento de recursos, e orquestração de processos de forma escalável e eficiente na nuvem.</p>
+                            <span class="card-tags">CloudFormation</span>
+                            <span class="card-tags">Lambda</span>
+                            <span class="card-tags">AWS</span>
+                            <span class="card-tags">Automação</span>
+                            <span class="card-tags">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/mlops.png" alt="Projeto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Motor de Inferência</h5>
+                            <p class="card-text">Desenvolvimento de um motor para otimizar a inferência de modelos em produção, garantindo desempenho, escalabilidade e respostas rápidas para grandes volumes de previsões.</p>
+                            <span class="card-tags">Data Engineering</span>
+                            <span class="card-tags">Machine Learning</span>
+                            <span class="card-tags">AWS</span>
+                            <span class="card-tags">MLOps</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/mlops.png" alt="Projeto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Monitoramento de Modelos</h5>
+                            <p class="card-text">Solução para monitorar modelos em produção, detectando drifts, alertando sobre quedas de desempenho e sugerindo re-treinos para manter a qualidade das previsões.</p>
+                            <span class="card-tags">Data Engineering</span>
+                            <span class="card-tags">Machine Learning</span>
+                            <span class="card-tags">AWS</span>
+                            <span class="card-tags">MLOps</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/mlops.png" alt="Projeto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pipeline de ETL</h5>
+                            <p class="card-text">Desenvolvimento de um pipeline de ETL (Extract, Transform, Load) para automatizar a coleta, transformação e carregamento de dados de múltiplas fontes para um data warehouse centralizado. Esse processo melhora a qualidade dos dados, facilita análises e suporta decisões estratégicas baseadas em dados limpos e bem estruturados.</p>
+                            <span class="card-tags">Data Engineering</span>
+                            <span class="card-tags">Data Pipeline</span>
+                            <span class="card-tags">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/mlops.png" alt="Projeto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Migração para a Nuvem</h5>
+                            <p class="card-text">Projeto focado na migração de aplicações e dados on-premises para a nuvem, visando maior escalabilidade, redução de custos e otimização de recursos. Inclui planejamento, execução da migração e validação da performance pós-migração para garantir a continuidade dos negócios.</p>
+                            <span class="card-tags">Cloud Computing</span>
+                            <span class="card-tags">AWS</span>
+                            <span class="card-tags">Infraestrutura</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Contatos -->
+    <div id="contatos" class="section">
+        <h2>Contato</h2>
+        <p>Gostaria de entrar em contato comigo? Sinta-se à vontade para me enviar uma mensagem ou me seguir nas redes sociais. Vou adorar ouvir de você!</p>
+
+        <div class="container">
+            <div class="row">
+                <!-- Coluna do Formulário -->
+                <div class="col-md-6">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nome">Nome <span class="required">*</span></label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem <span class="required">*</span></label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" id="send-button" class="btn custom-button" disabled>Enviar Mensagem</button>
+                    </form>       
+                    <div class="alert alert-success d-none font-weight-bold" id="flash-message" role="alert">
+                        Mensagem enviada com sucesso
+                    </div>                                            
+                </div>
+
+                <!-- Coluna da Imagem -->
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <img src="img/programmer.png" alt="Descrição da Imagem" class="img-fluid" style="margin-top: -100px;"> <!-- Subindo a imagem -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Seção Habilidades -->
+    <div id="habilidades" class="section">
+        <h2>Habilidades</h2>
+        <p>Aqui estão algumas das habilidades e tecnologias com as quais trabalho e sou proficiente:</p>
+
+        <div class="container">
+            <div class="row">
+                <!-- Habilidade 1 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 2 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 3 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 4 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 5 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 6 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 7 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 8 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 9 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 10 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 11 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 12 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 13 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 14 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 15 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
+                    </div>
+                </div>
+                <!-- Habilidade 16 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/poetry/poetry-original.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Certificações -->
+    <div id="certificacoes" class="section">
+        <h2>Certificações</h2>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/6f3328ce-9ed8-44d2-a961-5723d1d71128">
+                            <img src="img/certificacoes/mlprofessional.png" alt="Itaú Certificação" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>Professional - Machine Learning Engineering</h6>
+                        <ul class="text-justify small">
+                            <li>Programação avançada em Python (Pandas, Scikit-Learn, etc.)</li>
+                            <li>Desenvolvimento e implantação de modelos de machine learning</li>
+                            <li>Validação de modelos usando métricas adequadas</li>
+                            <li>Criação de APIs para servir modelos</li>
+                            <li>Deploy e monitoramento de modelos em produção</li>
+                            <li>Manipulação e análise de dados</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/e838ded8-f6b7-417e-8145-6ffaac1b6a70">
+                            <img src="img/certificacoes/practitioner.png" alt="Certificação AWS" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>AWS Certified Cloud Practitioner</h6>
+                        <ul class="text-justify small">
+                            <li>Entendimento fundamental de serviços de TI e seu uso na AWS Cloud.</li>
+                            <li>Compreensão de melhores práticas de segurança e conformidade na AWS.</li>
+                            <li>Conhecimento de modelos de cobrança e de suporte na AWS.</li>
+                            <li>Habilidade para explicar os benefícios da AWS Cloud.</li>
+                        </ul>                       
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/7e88df51-2ede-425f-97be-92e2d9597c44">
+                            <img src="img/certificacoes/dataengineer.png" alt="Certificação AWS" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>AWS Certified Data Engineer</h6>
+                        <ul class="text-justify small">
+                            <li>Habilidade em projetar e implementar soluções de big data na AWS.</li>
+                            <li>Experiência com serviços como AWS Glue, Redshift, Kinesis e EMR.</li>
+                            <li>Conhecimento de arquitetura de dados escalável e otimizada para análise.</li>
+                        </ul> 
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/a676f4ea-d1ea-4a9e-b2b6-507a4e53d230">
+                            <img src="img/certificacoes/sysops.png" alt="Certificação AWS" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>AWS Certified SysOps Administrator</h6>
+                        <ul class="text-justify small">
+                            <li>Proficiência na implantação, gestão e operação de sistemas na AWS.</li>
+                            <li>Monitoramento e medição de métricas de desempenho para soluções AWS.</li>
+                            <li>Implementação de controles de segurança e compliance na AWS.</li>
+                            <li>Automação de processos operacionais e manutenção de sistemas na nuvem.</li>
+                            <li>Solução de problemas e incidentes em ambientes AWS.</li>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/4669488b-c0bb-4b3d-869b-036f6141d559">
+                            <img src="img/certificacoes/developer.png" alt="Certificação AWS" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>AWS Certified Developer</h6>
+                        <ul class="text-justify small">
+                            <li>Implementação de soluções usando serviços como AWS Lambda, DynamoDB e API Gateway.</li>
+                            <li>Integração de serviços AWS com aplicações e pipelines de CI/CD.</li>
+                            <li>Uso de ferramentas e SDKs da AWS para desenvolvimento e depuração.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/a1e31f7d-db5c-41b2-aece-c8676382e436">
+                            <img src="img/certificacoes/architectassociate.png" alt="Certificação AWS" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>AWS Certified Solutions Architect</h6>
+                        <ul class="text-justify small">
+                            <li>Desenvolvimento de arquiteturas escaláveis e altamente disponíveis na AWS.</li>
+                            <li>Design de soluções de infraestrutura utilizando serviços como EC2, S3 e RDS.</li>
+                            <li>Planejamento e execução de migrações para a nuvem AWS.</li>
+                            <li>Criação de estratégias de recuperação de desastres e continuidade de negócios.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/1ed051db-80f4-4b63-90c1-8594d977cc18">
+                            <img src="img/certificacoes/architectprofessional.png" alt="Certificação AWS" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>AWS Certified Solutions Architect</h6>
+                        <ul class="text-justify small">
+                            <li>Desenvolvimento de arquiteturas complexas e robustas na AWS.</li>
+                            <li>Design de soluções multi-região e multi-account, garantindo alta disponibilidade e escalabilidade.</li>
+                            <li>Implementação de estratégias avançadas de segurança e gerenciamento de riscos na AWS.</li>
+                            <li>Otimização de desempenho e custos em grandes ambientes AWS.</li>
+                            <li>Planejamento e execução de migrações complexas e projetos de integração.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/81e19771-26a1-4ecf-986c-5a266e8e9146">
+                            <img src="img/certificacoes/machinelearningspeciality.png" alt="Certificação AWS" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>AWS Certified Machine Learning</h6>
+                        <ul class="text-justify small">
+                            <li>Desenvolvimento e implementação de modelos de machine learning na AWS.</li>
+                            <li>Uso de serviços AWS como SageMaker, Comprehend, e Rekognition para ML e AI.</li>
+                            <li>Criação de pipelines de dados e modelagem para treinar e avaliar modelos de ML.</li>
+                            <li>Aplicação de técnicas avançadas de machine learning e deep learning.</li>
+                            <li>Otimização de modelos de ML para performance e custo na nuvem AWS.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/842a7c76-872b-4ddc-93d8-b87b7c7a9005">
+                            <img src="img/certificacoes/datascience.png" alt="Itaú" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>Data Science</h6>
+                        <ul class="text-justify small">
+                            <li>Aplicação de técnicas estatísticas e algoritmos de machine learning para análise de dados.</li>
+                            <li>Desenvolvimento de modelos preditivos e analíticos para insights de negócios.</li>
+                            <li>Utilização de ferramentas e linguagens de programação como Python, R e SQL para análise de dados.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/9fc3ae7f-8e06-4b10-9497-a7508af261bb">
+                            <img src="img/certificacoes/mlopsitau.png" alt="Certificação AWS" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>Machine Learning Engineering - MLOps</h6>
+                        <ul class="text-justify small">
+                            <li>Desenvolvimento e implementação de pipelines de MLOps para automação de modelos de machine learning.</li>
+                            <li>Gerenciamento do ciclo de vida de modelos de machine learning, desde o treinamento até a produção.</li>
+                            <li>Uso de ferramentas e práticas para monitoramento, manutenção e otimização de modelos em produção.</li>
+                            <li>Implementação de práticas de DevOps para integrar machine learning em fluxos de trabalho contínuos.</li>
+                            <li>Criação de soluções para escalabilidade e eficiência operacional em ambientes de machine learning.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cert-card">
+                        <a href="https://www.credly.com/badges/27b4cc00-7766-4f33-8499-a068b01fd899">
+                            <img src="img/certificacoes/dataengineeritau.png" alt="Certificação AWS" class="img-fluid" style="height: 100px;">
+                        </a>
+                        <h6>Data Engineering</h6>
+                        <ul class="text-justify small">
+                            <li>Implementação de soluções de armazenamento e integração de dados em ambientes complexos.</li>
+                            <li>Uso de ferramentas e plataformas de dados para ETL (extração, transformação e carregamento).</li>
+                            <li>Aplicação de práticas de engenharia de dados para garantir a qualidade e a integridade dos dados.</li>
+                            <li>Desenvolvimento de soluções escaláveis para análise de grandes volumes de dados.</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script>
+        // Inicialize o EmailJS com sua chave pública
+        emailjs.init('xxx');
+
+        function validateForm() {
+            const nome = $('#nome').val().trim();
+            const email = $('#email').val().trim();
+            const mensagem = $('#mensagem').val().trim();
+
+            // Habilita o botão apenas se todos os campos estiverem preenchidos
+            $('#send-button').prop('disabled', !(nome && email && mensagem));
+        }
+
+        // Valida o formulário ao digitar em qualquer campo
+        $('#contactForm').on('input', validateForm);
+
+        // Envia o email
+        $('#contactForm').on('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            // Adiciona a classe ativa ao botão
+            $('#send-button').addClass('btn-custom-active');
+
+            // Envia o email usando o EmailJS
+            emailjs.sendForm('xxx', 'xxx', this)
+                .then(function(response) {
+                    $('#flash-message').removeClass('d-none').addClass('show');
+                    setTimeout(function() {
+                        $('#flash-message').removeClass('show');
+                        setTimeout(function() {
+                            $('#flash-message').addClass('d-none');
+                        }, 400); // Tempo para transição de desaparecimento
+                    }, 2000); // Exibe o card por 3 segundos
+                    $('#contactForm')[0].reset(); // Limpa o formulário após o envio
+                    validateForm(); // Reavaliar o estado do botão
+                    // Remove a classe ativa após o envio
+                    $('#send-button').removeClass('btn-custom-active');
+                    $('#flash-message').removeClass('d-none').addClass('show');
+
+                        
+                }, function(error) {
+                    alert('Ocorreu um erro ao enviar a mensagem, por favor tente novamente.');
+                    console.error('Erro ao enviar email:', error);
+                    // Remove a classe ativa em caso de erro
+                    $('#send-button').removeClass('btn-custom-active');
+                });
+        });
+        // Função para adicionar o efeito de fade-in ao rolar a página
+        $(window).on('scroll', function() {
+            $('.section').each(function() {
+                if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 100) {
+                    $(this).addClass('fade-in');
+                }
+            });
+        });
+        $(document).ready(function() {
+    $(window).on('scroll', function() {
+        let scrollPos = $(window).scrollTop() + 100; // Ajuste o valor para melhorar a precisão
+        
+        $('.section').each(function() {
+            let sectionTop = $(this).offset().top;
+            let sectionBottom = sectionTop + $(this).outerHeight();
+
+            if (scrollPos >= sectionTop && scrollPos <= sectionBottom) {
+                let id = $(this).attr('id');
+                $('.navbar-nav .nav-link').removeClass('active');
+                $('.navbar-nav .nav-link[href="#' + id + '"]').addClass('active');
+            }
+        });
+    });
+
+    // Adiciona a classe active ao link da seção visível ao carregar a página
+    $(window).trigger('scroll');
+});
+
+    </script>
 </body>
 </html>
