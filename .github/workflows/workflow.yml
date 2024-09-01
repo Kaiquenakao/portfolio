@@ -1,0 +1,24 @@
+name: Run JavaScript Script
+
+on:
+  workflow_dispatch:
+
+jobs:
+  display-variables:
+    name: Display Variables
+    runs-on: ubuntu-latest
+    env:
+      PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
+      SERVICE_ID: ${{ secrets.SERVICE_ID }}
+      TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'  # Use a version that matches your requirements
+
+    - name: Run JavaScript
+      run: node your-script.js
