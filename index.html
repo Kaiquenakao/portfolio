@@ -190,6 +190,15 @@
             color: white;
         }
 
+        .alert {
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Transição suave para opacidade */
+        }
+
+        .alert.show {
+            opacity: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -369,7 +378,10 @@
                             <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
                         </div>
                         <button type="submit" id="send-button" class="btn custom-button" disabled>Enviar Mensagem</button>
-                    </form>                                                   
+                    </form>       
+                    <div class="alert alert-success d-none font-weight-bold" id="flash-message" role="alert">
+                        Mensagem enviada com sucesso
+                    </div>                                            
                 </div>
 
                 <!-- Coluna da Imagem -->
@@ -411,13 +423,22 @@
             $('#send-button').addClass('btn-custom-active');
 
             // Envia o email usando o EmailJS
-            emailjs.sendForm('xx', 'xx', this)
+            emailjs.sendForm('xxx', 'xxx', this)
                 .then(function(response) {
-                    alert('Mensagem enviada com sucesso!');
+                    $('#flash-message').removeClass('d-none').addClass('show');
+                    setTimeout(function() {
+                        $('#flash-message').removeClass('show');
+                        setTimeout(function() {
+                            $('#flash-message').addClass('d-none');
+                        }, 400); // Tempo para transição de desaparecimento
+                    }, 2000); // Exibe o card por 3 segundos
                     $('#contactForm')[0].reset(); // Limpa o formulário após o envio
                     validateForm(); // Reavaliar o estado do botão
                     // Remove a classe ativa após o envio
                     $('#send-button').removeClass('btn-custom-active');
+                    $('#flash-message').removeClass('d-none').addClass('show');
+
+                        
                 }, function(error) {
                     alert('Ocorreu um erro ao enviar a mensagem, por favor tente novamente.');
                     console.error('Erro ao enviar email:', error);
