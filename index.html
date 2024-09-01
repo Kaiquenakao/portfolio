@@ -118,6 +118,7 @@
         }
         .custom-button:hover {
             background-color: #4d004d; /* Cor mais escura ao passar o mouse */
+            color: white;
         }
         .card-tags {
             margin-top: 10px;
@@ -183,6 +184,12 @@
             margin-top: -20px; /* Ajuste para subir a imagem */
         }
 
+        .btn-custom-active {
+            background-color: #4d004d !important; /* Cor escura do botão quando clicado */
+            border: none;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
@@ -200,7 +207,7 @@
                     <a class="nav-link" href="#projetos">Projetos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contato">Contato</a>
+                    <a class="nav-link" href="#contatos">Contato</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#habilidades">Habilidades</a>
@@ -348,21 +355,21 @@
             <div class="row">
                 <!-- Coluna do Formulário -->
                 <div class="col-md-6">
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="nome">Nome <span class="required">*</span></label>
-                            <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Seu email" required>
                         </div>
                         <div class="form-group">
                             <label for="mensagem">Mensagem <span class="required">*</span></label>
-                            <textarea class="form-control" id="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary custom-button">Enviar Mensagem</button>
-                    </form>
+                        <button type="submit" id="send-button" class="btn custom-button" disabled>Enviar Mensagem</button>
+                    </form>                                                   
                 </div>
 
                 <!-- Coluna da Imagem -->
@@ -378,7 +385,46 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     <script>
+        // Inicialize o EmailJS com sua chave pública
+        emailjs.init('xxx');
+
+        function validateForm() {
+            const nome = $('#nome').val().trim();
+            const email = $('#email').val().trim();
+            const mensagem = $('#mensagem').val().trim();
+
+            // Habilita o botão apenas se todos os campos estiverem preenchidos
+            $('#send-button').prop('disabled', !(nome && email && mensagem));
+        }
+
+        // Valida o formulário ao digitar em qualquer campo
+        $('#contactForm').on('input', validateForm);
+
+        // Envia o email
+        $('#contactForm').on('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            // Adiciona a classe ativa ao botão
+            $('#send-button').addClass('btn-custom-active');
+
+            // Envia o email usando o EmailJS
+            emailjs.sendForm('xx', 'xx', this)
+                .then(function(response) {
+                    alert('Mensagem enviada com sucesso!');
+                    $('#contactForm')[0].reset(); // Limpa o formulário após o envio
+                    validateForm(); // Reavaliar o estado do botão
+                    // Remove a classe ativa após o envio
+                    $('#send-button').removeClass('btn-custom-active');
+                }, function(error) {
+                    alert('Ocorreu um erro ao enviar a mensagem, por favor tente novamente.');
+                    console.error('Erro ao enviar email:', error);
+                    // Remove a classe ativa em caso de erro
+                    $('#send-button').removeClass('btn-custom-active');
+                });
+        });
         // Função para adicionar o efeito de fade-in ao rolar a página
         $(window).on('scroll', function() {
             $('.section').each(function() {
