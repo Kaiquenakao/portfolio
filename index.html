@@ -199,6 +199,12 @@
             opacity: 1;
         }
 
+        .nav-link.active {
+            border-bottom: 2px solid #660066; /* Cor roxa para o destaque */
+            color: #660066; /* Cor roxa para o texto */
+        }
+
+
     </style>
 </head>
 <body>
@@ -454,6 +460,26 @@
                 }
             });
         });
+        $(document).ready(function() {
+    $(window).on('scroll', function() {
+        let scrollPos = $(window).scrollTop() + 100; // Ajuste o valor para melhorar a precisão
+        
+        $('.section').each(function() {
+            let sectionTop = $(this).offset().top;
+            let sectionBottom = sectionTop + $(this).outerHeight();
+
+            if (scrollPos >= sectionTop && scrollPos <= sectionBottom) {
+                let id = $(this).attr('id');
+                $('.navbar-nav .nav-link').removeClass('active');
+                $('.navbar-nav .nav-link[href="#' + id + '"]').addClass('active');
+            }
+        });
+    });
+
+    // Adiciona a classe active ao link da seção visível ao carregar a página
+    $(window).trigger('scroll');
+});
+
     </script>
 </body>
 </html>
