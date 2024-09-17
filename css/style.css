@@ -316,3 +316,97 @@ a:visited {
 .card-body {
     padding: 16px;
 }
+
+
+/* Estilo específico para a página Model Registry */
+.project-page{
+    background-color: white; /* Cor de fundo desejada para esta página */
+}
+
+/* Mantém o resto dos estilos comuns sem alterações */
+body {
+    background-color: #f0f0f0; /* Cor de fundo cinza para outras páginas */
+    margin: 0;
+    padding-top: 56px; /* Espaço para o menu fixo no topo */
+}
+
+.navbar {
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-bottom: 1px solid #ddd; /* Borda inferior leve */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garantir que o menu fique acima do conteúdo */
+}
+
+.navbar-brand {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #000 !important; /* Cor preta */
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #555 !important; /* Cor ao passar o mouse */
+}
+
+/* Estilos comuns continuados... */
+
+/* Estilos para as abas */
+.custom-nav-tabs .nav-link {
+    border: none; /* Remove bordas padrão das abas */
+    color: #555; /* Cor padrão do texto das abas */
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+}
+
+.custom-nav-tabs .nav-link:hover {
+    color: #660066; /* Cor roxa ao passar o mouse */
+}
+
+/* Linha roxa ao selecionar a aba */
+.custom-nav-tabs .nav-link.active {
+    color: #660066; /* Cor do texto da aba ativa */
+    border-bottom: 3px solid #660066; /* Linha roxa embaixo da aba ativa */
+    transition: border-color 0.3s ease;
+}
+
+/* Efeito de foco */
+.custom-nav-tabs .nav-link:focus {
+    outline: none; /* Remove o outline ao focar na aba */
+}
+
+/* Suavizar a transição da linha de borda ao passar entre as abas */
+.custom-nav-tabs .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #660066;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Ao passar o mouse, a linha de borda aparece suavemente */
+.custom-nav-tabs .nav-link:hover::before {
+    width: 100%;
+}
+
+
+/* Estilo para o conteúdo das abas */
+.tab-content {
+    background-color: #ffffff !important; /* Fundo branco forçado */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
