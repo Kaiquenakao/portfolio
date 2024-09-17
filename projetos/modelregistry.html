@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Model Registry - Kaique Nakao</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+
+<body class="project-page">
     <nav class="shadow-lg navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">KN</a>
+        <a class="navbar-brand" href="../index.html">KN</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html#sobre">Sobre</a>
+                    <a class="nav-link" href="../index.html#sobre">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html#projetos">Projetos</a>
+                    <a class="nav-link" href="../index.html#projetos">Projetos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html#contatos">Contato</a>
+                    <a class="nav-link" href="../index.html#contatos">Contato</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html#habilidades">Habilidades</a>
+                    <a class="nav-link" href="../index.html#habilidades">Habilidades</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html#certificacoes">Certificações</a>
+                    <a class="nav-link" href="../index.html#certificacoes">Certificações</a>
                 </li>
             </ul>
         </div>
@@ -36,36 +38,73 @@
 
     <div class="container mt-5">
         <h1>Model Registry</h1>
-        <p>O Model Registry é um componente crucial em MLOps, permitindo a gestão e versionamento de modelos de Machine Learning. Ele garante a rastreabilidade, facilitando o deployment e o monitoramento contínuo dos modelos ao longo de seu ciclo de vida.</p>
 
-        <h2>Por que usar um Model Registry?</h2>
-        <p>Utilizar um Model Registry ajuda a resolver diversos desafios no desenvolvimento de modelos, como:</p>
-        <ul>
-            <li><strong>Versionamento:</strong> Mantém o histórico de todas as versões dos modelos.</li>
-            <li><strong>Rastreabilidade:</strong> Facilita o rastreamento de qual versão de modelo foi usada em produção.</li>
-            <li><strong>Reproducibilidade:</strong> Garante que os modelos possam ser reproduzidos com precisão.</li>
-            <li><strong>Auditoria:</strong> Proporciona uma trilha de auditoria completa para compliance.</li>
+        <!-- Navegação de Abas -->
+        <ul class="nav nav-tabs custom-nav-tabs" id="modelRegistryTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="visao-geral-tab" data-toggle="tab" href="#visao-geral" role="tab" aria-controls="visao-geral" aria-selected="true">Visão Geral</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="beneficios-tab" data-toggle="tab" href="#beneficios" role="tab" aria-controls="beneficios" aria-selected="false">Benefícios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="como-funciona-tab" data-toggle="tab" href="#como-funciona" role="tab" aria-controls="como-funciona" aria-selected="false">Como Funciona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="demonstracao-video-tab" data-toggle="tab" href="#demonstracao-video" role="tab" aria-controls="como-funciona" aria-selected="false">Demonstração</a>
+            </li>
         </ul>
 
-        <h2>Como funciona?</h2>
-        <p>O Model Registry armazena informações detalhadas sobre cada versão do modelo, incluindo:</p>
-        <ul>
-            <li>Metadados sobre o modelo (ex: nome, versão, data de criação).</li>
-            <li>Métricas de desempenho.</li>
-            <li>Artefatos do modelo (arquivos, código fonte, etc.).</li>
-            <li>Configurações de treinamento.</li>
-        </ul>
-
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content mt-3" id="modelRegistryTabContent">
+            <div class="tab-pane fade show active" id="visao-geral" role="tabpanel" aria-labelledby="visao-geral-tab">
+                <p>O Model Registry é um componente crucial em MLOps, permitindo a gestão e versionamento de modelos de Machine Learning. Ele garante a rastreabilidade, facilitando o deployment e o monitoramento contínuo dos modelos ao longo de seu ciclo de vida.</p>
+                <p>Este projeto de Model Registry permite não apenas salvar arquivos treinados, mas também armazenar metadados essenciais associados a cada modelo. Com isso, é possível:</p>
+                <ul>
+                    <li><strong>Salvar Modelos Treinados:</strong> Armazenar os arquivos dos modelos treinados, garantindo que eles estejam disponíveis para uso futuro.</li>
+                    <li><strong>Gerenciar Metadados:</strong> Registrar informações detalhadas sobre cada modelo, como versão, parâmetros de treinamento e métricas de desempenho.</li>
+                    <li><strong>Recuperar Modelos:</strong> Facilitar a recuperação de versões anteriores dos modelos, permitindo uma gestão eficiente e rollback quando necessário.</li>
+                    <li><strong>Permitir Acesso:</strong> Oferecer acesso aos modelos e seus metadados para diferentes usuários, promovendo a colaboração e a transparência no processo de desenvolvimento.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="beneficios" role="tabpanel" aria-labelledby="beneficios-tab">
+                <p>Utilizar um Model Registry traz diversos benefícios significativos em comparação com métodos tradicionais de gerenciamento de modelos de Machine Learning:</p>
+                <ul>
+                    <li><strong>Versionamento Eficiente:</strong> Em métodos tradicionais, o controle de versão de modelos é feito manualmente, muitas vezes resultando em confusão e dificuldade para rastrear qual versão foi usada em produção. O Model Registry automatiza esse processo, garantindo o histórico completo e organizado de todas as versões dos modelos.</li>
+                    <li><strong>Rastreabilidade e Transparência:</strong> Sem um registro formal, pode ser difícil identificar rapidamente qual versão de um modelo está em produção, o que pode impactar a capacidade de resolver problemas ou justificar decisões. Com o Model Registry, essas informações estão sempre acessíveis, promovendo maior transparência.</li>
+                    <li><strong>Reproducibilidade Garantida:</strong> Nos métodos tradicionais, reproduzir experimentos ou modelos antigos pode ser um desafio devido à falta de documentação clara. O Model Registry armazena os metadados completos e artefatos necessários para garantir que qualquer modelo possa ser reproduzido com precisão a qualquer momento.</li>
+                    <li><strong>Facilidade de Acesso e Colaboração:</strong> Tradicionalmente, o acesso a modelos e suas informações pode ser descentralizado, o que dificulta a colaboração entre equipes. Com o Model Registry, há um ponto único e centralizado de acesso, facilitando a colaboração e o compartilhamento de conhecimento.</li>
+                    <li><strong>Compliance e Auditoria:</strong> Sem um Model Registry, manter uma trilha de auditoria clara pode ser desafiador, especialmente para atender a exigências regulatórias. O registro de modelos automatiza a documentação de cada etapa, facilitando a conformidade com normas e requisitos de auditoria.</li>
+                    <li><strong>Redução de Risco:</strong> Gerenciar modelos de forma tradicional pode levar a erros, como a implementação incorreta de uma versão antiga de um modelo. O Model Registry reduz esses riscos ao garantir que a versão correta seja utilizada, com acesso facilitado a informações detalhadas sobre cada modelo.</li>
+                    <li><strong>Eficiência Operacional:</strong> Métodos tradicionais podem exigir mais esforço e tempo para gerenciar e atualizar modelos, com informações espalhadas em diferentes fontes. O Model Registry centraliza o gerenciamento, permitindo que as equipes otimizem suas operações e reduzam o tempo necessário para movimentar modelos entre ambientes.</li>
+                </ul>
+            </div>            
+            <div class="tab-pane fade" id="como-funciona" role="tabpanel" aria-labelledby="como-funciona-tab">
+                <p>O Model Registry funciona através de uma interface desenvolvida com Streamlit, que proporciona uma experiência intuitiva para os usuários interagirem com o sistema. Aqui está um resumo de como ele opera:</p>
+                <ul>
+                    <li><strong>Preenchimento de Metadados:</strong> Os usuários podem preencher informações detalhadas sobre cada modelo através da interface. Esses metadados incluem aspectos como o nome do modelo, versão, parâmetros de treinamento e métricas de desempenho.</li>
+                    <li><strong>Salvamento de Modelos Treinados:</strong> Após o treinamento de um modelo, os usuários têm a opção de salvar o modelo como um arquivo `.pkl`. Isso garante que o modelo treinado seja armazenado de forma segura e esteja disponível para futuras implementações ou análises.</li>
+                    <li><strong>Recuperação de Registros:</strong> Os usuários podem recuperar registros salvos anteriormente, acessando os modelos e seus metadados a partir da interface. Isso facilita a visualização e o gerenciamento de modelos previamente armazenados.</li>
+                    <li><strong>Busca Detalhada de Modelos:</strong> A interface permite a busca detalhada de modelos, possibilitando que os usuários encontrem modelos específicos com base em critérios como nome, versão ou parâmetros. Isso torna o processo de localização e análise de modelos muito mais eficiente.</li>
+                </ul>
+                <p>Para dar suporte ao armazenamento e gerenciamento de modelos e metadados, o backend do projeto utiliza a AWS. Isso proporciona escalabilidade, segurança e confiabilidade ao sistema, garantindo que todos os dados sejam gerenciados de forma eficiente e segura.</p>
+            </div>
+            <div class="tab-pane fade" id="demonstracao-video" role="tabpanel" aria-labelledby="demonstracao-video-tab">
+                <p>Para visualizar a demonstração, clique no botão abaixo e assista ao vídeo. Isso permitirá que você tenha uma compreensão mais prática e visual das funcionalidades e benefícios do Model Registry:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        <source src="videos/model_registry.mov" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <footer class="mt-5">
-        <div class="container text-center">
-            <p>&copy; 2024 Kaique Nakao. Todos os direitos reservados.</p>
-        </div>
-    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
