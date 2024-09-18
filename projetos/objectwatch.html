@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Watch - Kaique Nakao</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-page">
+    <nav class="shadow-lg navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">KN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#projetos">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contatos">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#habilidades">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#certificacoes">Certificações</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Object Watch</h1>
+
+        <!-- Navegação de Abas -->
+        <ul class="nav nav-tabs custom-nav-tabs" id="objectWatchTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="visao-geral-tab" data-toggle="tab" href="#visao-geral" role="tab" aria-controls="visao-geral" aria-selected="true">Visão Geral</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="beneficios-tab" data-toggle="tab" href="#beneficios" role="tab" aria-controls="beneficios" aria-selected="false">Benefícios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="como-funciona-tab" data-toggle="tab" href="#como-funciona" role="tab" aria-controls="como-funciona" aria-selected="false">Como Funciona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="demonstracao-video-tab" data-toggle="tab" href="#demonstracao-video" role="tab" aria-controls="demonstracao-video" aria-selected="false">Demonstração</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content mt-3" id="objectWatchTabContent">
+            <div class="tab-pane fade show active" id="visao-geral" role="tabpanel" aria-labelledby="visao-geral-tab">
+                <p>O Object Watch utiliza OpenCV para capturar e identificar objetos em tempo real a partir de uma transmissão de vídeo. Ele oferece uma solução eficaz para monitoramento, análise de vídeo e automação em diferentes contextos, como segurança e rastreamento de objetos.</p>
+                <p>Esse projeto permite:</p>
+                <ul>
+                    <li><strong>Detecção em Tempo Real:</strong> Identificar e destacar objetos automaticamente na transmissão de vídeo ao vivo.</li>
+                    <li><strong>Monitoramento Contínuo:</strong> Facilitar o monitoramento visual de eventos em tempo real para segurança e automação.</li>
+                    <li><strong>Análise de Vídeo:</strong> Analisar dados de vídeo para insights em diversos setores, como varejo, manufatura e vigilância.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="beneficios" role="tabpanel" aria-labelledby="beneficios-tab">
+                <p>Utilizar o Object Watch traz vários benefícios em relação a métodos tradicionais de monitoramento visual:</p>
+                <ul>
+                    <li><strong>Automatização de Processos:</strong> Reduz a necessidade de monitoramento manual constante, automatizando a detecção de eventos e objetos.</li>
+                    <li><strong>Precisão em Detecções:</strong> Utilizando algoritmos avançados de visão computacional, o Object Watch aumenta a precisão e reduz falsos positivos em detecções de objetos.</li>
+                    <li><strong>Escalabilidade:</strong> Pode ser aplicado em uma ampla variedade de setores e cenários, adaptando-se facilmente a diferentes fluxos de trabalho e necessidades de monitoramento.</li>
+                    <li><strong>Integração com Sistemas de Segurança:</strong> Facilmente integrável com sistemas de segurança para melhorar a eficiência de monitoramento.</li>
+                    <li><strong>Redução de Custos:</strong> Com automação, as equipes reduzem a necessidade de supervisão contínua, otimizando custos operacionais.</li>
+                </ul>
+            </div>            
+            <div class="tab-pane fade" id="como-funciona" role="tabpanel" aria-labelledby="como-funciona-tab">
+                <p>O Object Watch funciona com base em tecnologia de visão computacional e detecção de objetos em tempo real, utilizando OpenCV para captura e processamento de vídeo:</p>
+                <ul>
+                    <li><strong>Captura de Vídeo:</strong> Através de uma câmera conectada ou transmissão ao vivo, o sistema captura o fluxo de vídeo em tempo real.</li>
+                    <li><strong>Processamento de Imagem:</strong> O OpenCV processa os frames de vídeo e identifica objetos com base em algoritmos de detecção treinados previamente.</li>
+                    <li><strong>Exibição dos Resultados:</strong> Os objetos detectados são destacados em tempo real na tela, permitindo monitoramento eficiente.</li>
+                    <li><strong>Notificações e Ações:</strong> O sistema pode ser configurado para emitir alertas ou realizar ações automatizadas com base na detecção de objetos.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="demonstracao-video" role="tabpanel" aria-labelledby="demonstracao-video-tab">
+                <p>Para ver uma demonstração do Object Watch em ação, clique no vídeo abaixo:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        <source src="videos/object_watch.mov" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">© 2024 Kaique Nakao. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+
+</html>
