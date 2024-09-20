@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Kaique Nakao</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-page">
+    <nav class="shadow-lg navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">KN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#projetos">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contatos">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#habilidades">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#certificacoes">Certificações</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Chatbot</h1>
+
+        <!-- Navegação de Abas -->
+        <ul class="nav nav-tabs custom-nav-tabs" id="chatbotTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="visao-geral-tab" data-toggle="tab" href="#visao-geral" role="tab" aria-controls="visao-geral" aria-selected="true">Visão Geral</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ingestao-tab" data-toggle="tab" href="#ingestao" role="tab" aria-controls="ingestao" aria-selected="false">Ingestão</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="query-tab" data-toggle="tab" href="#query" role="tab" aria-controls="query" aria-selected="false">Query</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="demonstracao-video-tab" data-toggle="tab" href="#demonstracao-video" role="tab" aria-controls="demonstracao-video" aria-selected="false">Demonstração</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content mt-3" id="chatbotTabContent">
+            <div class="tab-pane fade show active" id="visao-geral" role="tabpanel" aria-labelledby="visao-geral-tab">
+                <p>Este projeto de Chatbot utiliza um banco de dados vetorial para permitir a ingestão de documentos e a realização de consultas com alta precisão. Ele é composto por dois principais componentes: o de ingestão de PDFs e o de consulta (query).</p>
+                <p>Os principais objetivos do projeto incluem:</p>
+                <ul>
+                    <li><strong>Ingestão de PDFs:</strong> Permitir o envio de arquivos PDF para serem armazenados em um banco de dados vetorial (Pinecone), facilitando a consulta de informações contidas nos documentos.</li>
+                    <li><strong>Consulta Rápida:</strong> O chatbot é capaz de responder a perguntas com base nos PDFs ingeridos, utilizando o banco vetorial para fornecer respostas precisas e rápidas.</li>
+                    <li><strong>Gerenciamento Eficiente:</strong> Centraliza o armazenamento e a consulta de informações, permitindo que os usuários recuperem dados específicos de maneira ágil.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="ingestao" role="tabpanel" aria-labelledby="ingestao-tab">
+                <p>No componente de Ingestão, os usuários podem enviar arquivos PDF, que são processados e armazenados em um banco de dados vetorial (Pinecone). Isso facilita a indexação e a futura consulta de informações.</p>
+                <p>Principais funcionalidades:</p>
+                <ul>
+                    <li><strong>Envio de PDFs:</strong> Interface intuitiva para carregar arquivos PDF diretamente na plataforma.</li>
+                    <li><strong>Armazenamento em Pinecone:</strong> Após o envio, o conteúdo dos PDFs é processado e armazenado no banco de dados vetorial, tornando a busca mais eficiente.</li>
+                    <li><strong>Processamento Rápido:</strong> O sistema processa os documentos rapidamente, permitindo a imediata disponibilidade para consulta.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="query" role="tabpanel" aria-labelledby="query-tab">
+                <p>O componente de Query permite que os usuários façam perguntas diretamente ao chatbot. Ele utiliza o banco de dados Pinecone para buscar respostas nos PDFs ingeridos.</p>
+                <p>Principais funcionalidades:</p>
+                <ul>
+                    <li><strong>Busca Inteligente:</strong> O chatbot utiliza um algoritmo de busca vetorial para localizar rapidamente as informações mais relevantes nos documentos ingeridos.</li>
+                    <li><strong>Respostas Precisas:</strong> As respostas são baseadas no conteúdo dos PDFs, garantindo precisão e relevância na resposta.</li>
+                    <li><strong>Interface Simples:</strong> A interface de consulta é fácil de usar, permitindo que os usuários façam perguntas e obtenham respostas de forma rápida.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="demonstracao-video" role="tabpanel" aria-labelledby="demonstracao-video-tab">
+                <p>Assista à demonstração abaixo para ver o chatbot em ação, desde a ingestão de PDFs até a realização de queries:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        <source src="videos/chatbot.mov" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">© 2024 Kaique Nakao. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</html>
