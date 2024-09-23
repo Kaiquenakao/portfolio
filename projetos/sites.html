@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Sites</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Garante que o footer fique no rodapé da página */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .project-page {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            flex: 1;
+        }
+
+        footer.footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="project-page">
+    <nav class="shadow-lg navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">KN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#projetos">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contatos">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#habilidades">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#certificacoes">Certificações</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Meus Sites</h1>
+
+        <!-- Navegação de Abas -->
+        <ul class="nav nav-tabs custom-nav-tabs" id="platformTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="matefacil-tab" data-toggle="tab" href="#matefacil" role="tab" aria-controls="matefacil" aria-selected="true">MateFácil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="neuronios-tab" data-toggle="tab" href="#neuronios" role="tab" aria-controls="neuronios" aria-selected="false">Neurônios Virtuais</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="comparfacil-tab" data-toggle="tab" href="#comparfacil" role="tab" aria-controls="comparfacil" aria-selected="false">ComparFácil</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content mt-3" id="platformTabContent">
+            <div class="tab-pane fade show active" id="matefacil" role="tabpanel" aria-labelledby="matefacil-tab">
+                <p>O <a href="https://matefacil.com.br" target="_blank">MateFácil</a> é uma plataforma que facilita o acesso a ferramentas de cálculo online, otimizando o tempo dos usuários com funcionalidades rápidas e eficientes.</p>
+                <p>Visite o site para explorar as funcionalidades que vão desde o cálculo de MMC até cálculo de progressão geométrica.</p>
+            </div>
+            <div class="tab-pane fade" id="neuronios" role="tabpanel" aria-labelledby="neuronios-tab">
+                <p>O <a href="https://neuroniosvirtuais.com.br" target="_blank">Neurônios Virtuais</a> é um blog focado em inteligência artificial e aprendizado de máquina, trazendo artigos detalhados sobre inovações e tendências no setor de IA.</p>
+                <p>Visite o blog para aprender mais sobre redes neurais, visão computacional e muito mais!</p>
+            </div>
+            <div class="tab-pane fade" id="comparfacil" role="tabpanel" aria-labelledby="comparfacil-tab">
+                <p>O <a href="https://www.comparfacil.com.br" target="_blank">ComparFácil</a> permite a comparação de textos, ajudando a encontrar semelhanças e diferenças de maneira rápida e eficaz, ideal para análise de documentos e revisão textual.</p>
+                <p>Acesse o site para começar a comparar textos e realizar análises detalhadas.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">© 2024 Kaique Nakao. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
