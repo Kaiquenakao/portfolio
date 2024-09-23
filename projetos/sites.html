@@ -32,6 +32,17 @@
             width: 100%;
             text-align: center;
         }
+
+        /* Estilo específico para links dentro das abas */
+        .tab-pane a {
+            color: blue; /* Cor azul para links */
+            text-decoration: underline; /* Sublinhado */
+        }
+
+        .tab-pane a:hover {
+            color: darkblue; /* Cor escura ao passar o mouse */
+            text-decoration: none; /* Remove sublinhado ao passar o mouse */
+        }
     </style>
 </head>
 
@@ -80,14 +91,19 @@
 
         <!-- Conteúdo das Abas -->
         <div class="tab-content mt-3" id="platformTabContent">
+            <!-- Aba MateFácil -->
             <div class="tab-pane fade show active" id="matefacil" role="tabpanel" aria-labelledby="matefacil-tab">
                 <p>O <a href="https://matefacil.com.br" target="_blank">MateFácil</a> é uma plataforma que facilita o acesso a ferramentas de cálculo online, otimizando o tempo dos usuários com funcionalidades rápidas e eficientes.</p>
                 <p>Visite o site para explorar as funcionalidades que vão desde o cálculo de MMC até cálculo de progressão geométrica.</p>
             </div>
+
+            <!-- Aba Neurônios Virtuais -->
             <div class="tab-pane fade" id="neuronios" role="tabpanel" aria-labelledby="neuronios-tab">
                 <p>O <a href="https://neuroniosvirtuais.com.br" target="_blank">Neurônios Virtuais</a> é um blog focado em inteligência artificial e aprendizado de máquina, trazendo artigos detalhados sobre inovações e tendências no setor de IA.</p>
                 <p>Visite o blog para aprender mais sobre redes neurais, visão computacional e muito mais!</p>
             </div>
+
+            <!-- Aba ComparFácil -->
             <div class="tab-pane fade" id="comparfacil" role="tabpanel" aria-labelledby="comparfacil-tab">
                 <p>O <a href="https://www.comparfacil.com.br" target="_blank">ComparFácil</a> permite a comparação de textos, ajudando a encontrar semelhanças e diferenças de maneira rápida e eficaz, ideal para análise de documentos e revisão textual.</p>
                 <p>Acesse o site para começar a comparar textos e realizar análises detalhadas.</p>
