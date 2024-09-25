@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Store - Kaique Nakao</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-page">
+    <nav class="shadow-lg navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">KN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#projetos">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contatos">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#habilidades">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#certificacoes">Certificações</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Feature Store</h1>
+
+        <!-- Navegação de Abas -->
+        <ul class="nav nav-tabs custom-nav-tabs" id="featureStoreTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="visao-geral-tab" data-toggle="tab" href="#visao-geral" role="tab" aria-controls="visao-geral" aria-selected="true">Visão Geral</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="beneficios-tab" data-toggle="tab" href="#beneficios" role="tab" aria-controls="beneficios" aria-selected="false">Benefícios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="como-funciona-tab" data-toggle="tab" href="#como-funciona" role="tab" aria-controls="como-funciona" aria-selected="false">Como Funciona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="demonstracao-video-tab" data-toggle="tab" href="#demonstracao-video" role="tab" aria-controls="como-funciona" aria-selected="false">Demonstração</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content mt-3" id="featureStoreTabContent">
+            <div class="tab-pane fade show active" id="visao-geral" role="tabpanel" aria-labelledby="visao-geral-tab">
+                <p>A Feature Store é uma plataforma que centraliza o armazenamento, gerenciamento e compartilhamento de **features** usadas em modelos de Machine Learning. Ela facilita o reuso de dados pré-processados e garante consistência entre treino e inferência.</p>
+                <p>Este projeto de Feature Store é crucial para acelerar o desenvolvimento de modelos, assegurando que as features utilizadas durante o treinamento de modelos também estejam disponíveis em produção, sem discrepâncias. Com a Feature Store, você pode:</p>
+                <ul>
+                    <li><strong>Centralizar Features:</strong> Armazenar features pré-processadas, prontas para serem reutilizadas por diferentes modelos.</li>
+                    <li><strong>Garantir Consistência:</strong> Evitar divergências entre os dados de treinamento e os de produção, proporcionando uma fonte única de verdade.</li>
+                    <li><strong>Facilitar a Colaboração:</strong> Permitir que cientistas de dados e engenheiros de machine learning acessem e compartilhem features de maneira eficiente.</li>
+                    <li><strong>Reduzir o Tempo de Desenvolvimento:</strong> Reaproveitar features já existentes, reduzindo o tempo necessário para preparar novos datasets.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="beneficios" role="tabpanel" aria-labelledby="beneficios-tab">
+                <p>A utilização de uma Feature Store traz diversos benefícios:</p>
+                <ul>
+                    <li><strong>Reuso de Features:</strong> Ao centralizar o armazenamento de features, diferentes equipes podem reutilizar as mesmas features, evitando redundância de trabalho.</li>
+                    <li><strong>Consistência Entre Treino e Produção:</strong> Garantir que as mesmas features usadas para treinar os modelos estejam disponíveis em tempo real, evitando problemas de performance inesperados.</li>
+                    <li><strong>Aceleramento de Desenvolvimento:</strong> A Feature Store permite que novos modelos sejam desenvolvidos mais rapidamente, já que as features necessárias estão pré-processadas e prontas para uso.</li>
+                    <li><strong>Versionamento de Features:</strong> Assim como no versionamento de modelos, a Feature Store armazena versões das features, permitindo auditar e recuperar versões anteriores, se necessário.</li>
+                    <li><strong>Facilidade de Acesso:</strong> O acesso centralizado às features promove uma maior colaboração e transparência entre as equipes de desenvolvimento de dados e engenharia.</li>
+                </ul>
+            </div>            
+            <div class="tab-pane fade" id="como-funciona" role="tabpanel" aria-labelledby="como-funciona-tab">
+                <p>A Feature Store funciona integrando-se com pipelines de dados para garantir que as features estejam sempre atualizadas e disponíveis tanto para o treino quanto para a inferência dos modelos.</p>
+                <ul>
+                    <li><strong>Integração com Pipelines de Dados:</strong> A Feature Store se conecta diretamente aos fluxos de dados existentes, garantindo que os dados processados sejam transformados em features de alta qualidade.</li>
+                    <li><strong>Atualizações em Tempo Real:</strong> As features podem ser atualizadas em tempo real, permitindo que novos dados sejam incorporados imediatamente em ambientes de produção.</li>
+                    <li><strong>Gestão de Features:</strong> A plataforma oferece uma interface intuitiva para a gestão, busca e versionamento de features, facilitando a exploração e uso eficiente dos dados.</li>
+                    <li><strong>Compatível com Múltiplos Ambientes:</strong> As features armazenadas podem ser acessadas tanto em ambientes de desenvolvimento quanto em produção, promovendo uma integração suave no ciclo de vida dos modelos.</li>
+                </ul>
+                <p>O backend da Feature Store é desenvolvido utilizando serviços da AWS, oferecendo escalabilidade e segurança, permitindo que os dados sejam gerenciados de forma eficaz.</p>
+            </div>
+            <div class="tab-pane fade" id="demonstracao-video" role="tabpanel" aria-labelledby="demonstracao-video-tab">
+                <p>Para entender melhor o funcionamento da Feature Store, assista à demonstração no vídeo abaixo:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        <source src="videos/feature_store_demo.mov" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">© 2024 Kaique Nakao. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</html>
