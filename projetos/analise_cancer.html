@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Câncer com Machine Learning - Kaique Nakao</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-page">
+    <nav class="shadow-lg navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">KN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#projetos">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contatos">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#habilidades">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#certificacoes">Certificações</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Análise de Câncer com Machine Learning</h1>
+
+        <!-- Navegação de Abas -->
+        <ul class="nav nav-tabs custom-nav-tabs" id="cancerTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="visao-geral-tab" data-toggle="tab" href="#visao-geral" role="tab" aria-controls="visao-geral" aria-selected="true">Visão Geral</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="dados-tab" data-toggle="tab" href="#dados" role="tab" aria-controls="dados" aria-selected="false">Dados e Processamento</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="modelos-tab" data-toggle="tab" href="#modelos" role="tab" aria-controls="modelos" aria-selected="false">Modelos Preditivos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="demonstracao-video-tab" data-toggle="tab" href="#demonstracao-video" role="tab" aria-controls="demonstracao-video" aria-selected="false">Demonstração</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content mt-3" id="cancerTabContent">
+            <!-- Aba Visão Geral -->
+            <div class="tab-pane fade show active" id="visao-geral" role="tabpanel" aria-labelledby="visao-geral-tab">
+                <p>Este projeto visa a criação de um modelo preditivo para diagnóstico de câncer, utilizando técnicas avançadas de machine learning. O objetivo é identificar precocemente a presença de células cancerígenas, oferecendo suporte a médicos no processo de diagnóstico e tratamento.</p>
+                <p>Os principais objetivos do projeto incluem:</p>
+                <ul>
+                    <li><strong>Identificação Precoce:</strong> Detectar sinais de câncer com alta precisão em fases iniciais, aumentando as chances de tratamento eficaz.</li>
+                    <li><strong>Machine Learning Supervisionado:</strong> Utilizar algoritmos supervisionados para treinar modelos com base em dados médicos reais.</li>
+                    <li><strong>Validação com Dados Reais:</strong> O modelo é validado com dados de pacientes, garantindo que suas predições sejam baseadas em cenários reais.</li>
+                </ul>
+            </div>
+
+            <!-- Aba Dados e Processamento -->
+            <div class="tab-pane fade" id="dados" role="tabpanel" aria-labelledby="dados-tab">
+                <p>Os dados utilizados neste projeto incluem exames médicos, imagens de diagnóstico e dados clínicos de pacientes. O processo de engenharia de features foi realizado para garantir que o modelo pudesse aprender de forma eficaz.</p>
+                <p>Principais funcionalidades:</p>
+                <ul>
+                    <li><strong>Engenharia de Features:</strong> Criação e seleção de variáveis relevantes a partir dos dados brutos, como indicadores médicos e características das imagens.</li>
+                    <li><strong>Limpeza e Preprocessamento:</strong> Tratamento de dados ausentes e outliers para garantir a qualidade e consistência das informações utilizadas.</li>
+                    <li><strong>Normalização de Dados:</strong> Ajuste das escalas dos dados para facilitar o treinamento de modelos de machine learning.</li>
+                </ul>
+            </div>
+
+            <!-- Aba Modelos Preditivos -->
+            <div class="tab-pane fade" id="modelos" role="tabpanel" aria-labelledby="modelos-tab">
+                <p>O projeto envolveu o uso de diversos algoritmos de machine learning, com o objetivo de comparar sua performance e selecionar o mais adequado para o diagnóstico de câncer.</p>
+                <p>Principais técnicas utilizadas:</p>
+                <ul>
+                    <li><strong>Regressão Logística:</strong> Método estatístico que permite prever a probabilidade de um evento, neste caso, a presença de câncer, facilitando a interpretação dos resultados.</li>
+                    <li><strong>Árvores de Decisão:</strong> Algoritmo de fácil interpretação, útil para entender quais features são mais relevantes no diagnóstico.</li>
+                </ul>
+                <p>O modelo final foi selecionado com base em métricas como acurácia, precisão e sensibilidade, priorizando a identificação correta de pacientes com câncer.</p>
+            </div>
+
+            <!-- Aba Demonstração em Vídeo -->
+            <div class="tab-pane fade" id="demonstracao-video" role="tabpanel" aria-labelledby="demonstracao-video-tab">
+                <p>Assista à demonstração abaixo para ver o processo de análise e diagnóstico de câncer utilizando machine learning:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        <source src="videos/analise_cancer_ml.mov" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">© 2024 Kaique Nakao. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</html>
