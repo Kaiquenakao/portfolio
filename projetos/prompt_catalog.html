@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Catalog - Kaique Nakao</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-page">
+    <nav class="shadow-lg navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">KN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#projetos">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contatos">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#habilidades">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#certificacoes">Certificações</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Prompt Catalog</h1>
+        <a href="https://github.com/Kaiquenakao/prompt-catalog" target="_blank"
+            class="btn btn-outline-secondary btn-sm mb-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="16"
+                style="margin-right:6px;">
+            github.com/Kaiquenakao/prompt-catalog
+        </a>
+
+        <!-- Navegação de Abas -->
+        <ul class="nav nav-tabs custom-nav-tabs" id="promptCatalogTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="visao-geral-tab" data-toggle="tab" href="#visao-geral" role="tab"
+                    aria-controls="visao-geral" aria-selected="true">Visão Geral</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="arquitetura-tab" data-toggle="tab" href="#arquitetura" role="tab"
+                    aria-controls="arquitetura" aria-selected="false">Arquitetura</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="como-funciona-tab" data-toggle="tab" href="#como-funciona" role="tab"
+                    aria-controls="como-funciona" aria-selected="false">Como Funciona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="demonstracao-tab" data-toggle="tab" href="#demonstracao" role="tab"
+                    aria-controls="demonstracao" aria-selected="false">Demonstração</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content mt-3" id="promptCatalogTabContent">
+
+            <!-- ABA: Visão Geral -->
+            <div class="tab-pane fade show active" id="visao-geral" role="tabpanel" aria-labelledby="visao-geral-tab">
+                <p>O <strong>Prompt Catalog</strong> é uma plataforma interna para gerenciamento, versionamento e
+                    monitoramento de prompts LLM em produção.</p>
+                <p>Times que usam LLMs em produtos enfrentam um problema recorrente: prompts vivem no código, em
+                    planilhas, ou na cabeça das pessoas. Quando algo dá errado em produção — uma resposta estranha, uma
+                    mudança de comportamento — não há rastreabilidade, não há histórico, não há rollback.</p>
+                <p>O Prompt Catalog resolve isso tratando prompts como artefatos de software:</p>
+                <ul>
+                    <li><strong>Versionados:</strong> Cada alteração gera uma nova versão, as anteriores ficam
+                        preservadas.</li>
+                    <li><strong>Deployados:</strong> Um prompt só vai para produção após um deploy explícito.</li>
+                    <li><strong>Monitorados:</strong> Cada execução é logada com modelo, tokens, latência, variáveis e
+                        output.</li>
+                    <li><strong>Testáveis:</strong> Qualquer versão pode ser testada antes de ir para produção.</li>
+                    <li><strong>Auditáveis:</strong> O histórico separa execuções de playground (testes) de produção
+                        (API real).</li>
+                </ul>
+            </div>
+
+            <!-- ABA: Arquitetura -->
+            <div class="tab-pane fade" id="arquitetura" role="tabpanel" aria-labelledby="arquitetura-tab">
+                <p>Visão geral da arquitetura do Prompt Catalog.</p>
+                <div class="text-center mt-3">
+                    <img src="https://raw.githubusercontent.com/Kaiquenakao/prompt-catalog/main/doc/img/Prompt%20Catalog.png"
+                        alt="Arquitetura Prompt Catalog" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- ABA: Como Funciona -->
+            <div class="tab-pane fade" id="como-funciona" role="tabpanel" aria-labelledby="como-funciona-tab">
+                <p>O Prompt Catalog funciona através de uma interface que permite gerenciar o ciclo de vida completo de
+                    prompts em produção. Aqui está um resumo de como ele opera:</p>
+                <ul>
+                    <li><strong>Criação e Versionamento:</strong> Crie prompts com variáveis dinâmicas e gerencie
+                        versões automaticamente. Cada edição gera uma nova versão sem sobrescrever as anteriores.</li>
+                    <li><strong>Deploy controlado:</strong> Prompts passam por um processo de deploy explícito antes de
+                        chegarem à produção, evitando alterações acidentais em ambiente real.</li>
+                    <li><strong>Playground de testes:</strong> Teste qualquer versão de um prompt com variáveis
+                        customizadas antes de promovê-la para produção.</li>
+                    <li><strong>Monitoramento de execuções:</strong> Todas as execuções são logadas com modelo
+                        utilizado, tokens consumidos, latência, variáveis de entrada e output gerado.</li>
+                    <li><strong>Auditoria:</strong> O histórico diferencia execuções de playground de execuções reais
+                        via API, garantindo rastreabilidade completa.</li>
+                </ul>
+            </div>
+
+            <!-- ABA: Demonstração -->
+            <div class="tab-pane fade" id="demonstracao" role="tabpanel" aria-labelledby="demonstracao-tab">
+                <p>Para visualizar a demonstração, assista ao vídeo abaixo e veja na prática o gerenciamento,
+                    versionamento e monitoramento de prompts com o Prompt Catalog:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        <source src="https://kaique-portfolio-videos.s3.amazonaws.com/prompt_catalog.mp4"
+                            type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">© 2024 Kaique Nakao. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</html>

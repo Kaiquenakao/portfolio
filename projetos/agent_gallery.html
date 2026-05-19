@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Gallery - Kaique Nakao</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-page">
+    <nav class="shadow-lg navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">KN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#projetos">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contatos">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#habilidades">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#certificacoes">Certificações</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Agent Gallery</h1>
+        <a href="https://github.com/Kaiquenakao/agent-gallery" target="_blank"
+            class="btn btn-outline-secondary btn-sm mb-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="16"
+                style="margin-right:6px;">
+            github.com/Kaiquenakao/agent-gallery
+        </a>
+
+        <!-- Navegação de Abas -->
+        <ul class="nav nav-tabs custom-nav-tabs" id="agentGalleryTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="visao-geral-tab" data-toggle="tab" href="#visao-geral" role="tab"
+                    aria-controls="visao-geral" aria-selected="true">Visão Geral</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="arquitetura-tab" data-toggle="tab" href="#arquitetura" role="tab"
+                    aria-controls="arquitetura" aria-selected="false">Arquitetura</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="como-funciona-tab" data-toggle="tab" href="#como-funciona" role="tab"
+                    aria-controls="como-funciona" aria-selected="false">Como Funciona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="demonstracao-tab" data-toggle="tab" href="#demonstracao" role="tab"
+                    aria-controls="demonstracao" aria-selected="false">Demonstração</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content mt-3" id="agentGalleryTabContent">
+
+            <!-- ABA: Visão Geral -->
+            <div class="tab-pane fade show active" id="visao-geral" role="tabpanel" aria-labelledby="visao-geral-tab">
+                <p>O <strong>Agent Gallery</strong> é uma plataforma para registrar, catalogar e conversar com agentes
+                    de IA customizados. Construída sobre infraestrutura serverless na AWS e alimentada pelo GPT-4.1 da
+                    OpenAI, oferece uma interface Streamlit intuitiva para que times possam gerenciar seus agentes e
+                    interagir com eles diretamente — sem escrever uma linha de código.</p>
+                <p>Times que constroem com IA frequentemente acabam com dezenas de agentes espalhados por ferramentas,
+                    documentos e scripts. O Agent Gallery resolve isso com:</p>
+                <ul>
+                    <li><strong>Descoberta:</strong> Encontre o agente certo para o trabalho a partir de um catálogo
+                        central.</li>
+                    <li><strong>Reuso:</strong> Compartilhe agentes entre times para evitar retrabalho.</li>
+                    <li><strong>Interatividade:</strong> Converse com qualquer agente cadastrado direto pela interface.
+                    </li>
+                    <li><strong>Governança:</strong> Prompts e metadados armazenados e consultáveis no DynamoDB.</li>
+                    <li><strong>Escalabilidade:</strong> 100% serverless — escala para zero quando ocioso, sobe sob
+                        demanda.</li>
+                </ul>
+            </div>
+
+            <!-- ABA: Arquitetura -->
+            <div class="tab-pane fade" id="arquitetura" role="tabpanel" aria-labelledby="arquitetura-tab">
+                <p>Toda a infraestrutura é provisionada com Terraform, organizada em módulos independentes.</p>
+                <div class="text-center mt-3">
+                    <img src="https://raw.githubusercontent.com/Kaiquenakao/agent-gallery/main/doc/arquitetura.png"
+                        alt="Arquitetura Agent Gallery" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- ABA: Como Funciona -->
+            <div class="tab-pane fade" id="como-funciona" role="tabpanel" aria-labelledby="como-funciona-tab">
+                <p>O Agent Gallery funciona através de uma interface desenvolvida com Streamlit, que proporciona uma
+                    experiência intuitiva para os usuários interagirem com o sistema. Aqui está um resumo de como ele
+                    opera:</p>
+                <ul>
+                    <li><strong>Galeria de Agentes:</strong> Navegue por todos os agentes cadastrados em um catálogo
+                        visual centralizado.</li>
+                    <li><strong>Cadastrar Agente:</strong> Adicione um novo agente informando nome, descrição e prompt
+                        de sistema, sem escrever código.</li>
+                    <li><strong>Chat:</strong> Envie mensagens para qualquer agente e receba respostas via GPT-4.1,
+                        configuradas pelo prompt de sistema do agente.</li>
+                    <li><strong>Detalhe do Agente:</strong> Inspecione metadados e o prompt de sistema de um agente
+                        específico.</li>
+                </ul>
+                <p>Para dar suporte ao armazenamento e gerenciamento, o backend utiliza AWS Lambda + API Gateway +
+                    DynamoDB, com segredos armazenados com segurança no AWS SSM Parameter Store.</p>
+            </div>
+
+            <!-- ABA: Demonstração -->
+            <div class="tab-pane fade" id="demonstracao" role="tabpanel" aria-labelledby="demonstracao-tab">
+                <p>Para visualizar a demonstração, clique no botão abaixo e assista ao vídeo. Isso permitirá que você
+                    tenha uma compreensão mais prática e visual das funcionalidades do Agent Gallery:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        <source src="videos/agent_gallery.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">© 2024 Kaique Nakao. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</html>
